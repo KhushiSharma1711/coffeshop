@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend><h4>Feedback_form</h4></legend>
+            Your feedback type:<br>
+        <input type="radio" id="comment" name="feedback" value="comment" required>
+        <label for="comment">Comment</label><br>
+        <input type="radio" id="issue" name="feedback" value="issue" required>
+        <label for="issue">Issue</label><br>
+        <input type="radio" id="question" name="feedback" value="question" required>
+        <label for="question">Question</label><br><br>
+
+       
+        Name: <input type="text" id="username" name="username" placeholder="your_name" required><br><br>
+            
+        Your feedback: <br><textarea name="mytext" cols="40" rows="5" placeholder="write your feedback..."></textarea><br><br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

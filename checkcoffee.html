@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS for the Carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styling for hover effects */
+        .menu-item:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        /* Fixed background image for the entire page */
+        body {
+            background-image: url('https://victorallen.com/cdn/shop/articles/vicor-allen-coffee-beans-bulk-request-1.jpg?v=1572039618'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white p-4">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Coffee Shop</a>
+            <div class="space-x-6">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#menu" class="hover:text-gray-300">Menu</a>
+                <a href="#cart" class="hover:text-gray-300" onclick="toggleCartModal()">Cart <span id="cart-count" class="text-lg">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Carousel) -->
+    <section id="home" class="relative mt-8">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/175711/pexels-photo-175711.jpeg" alt="Coffee Slide 1" class="w-full h-[60vh] object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/2956954/pexels-photo-2956954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 " alt="Coffee Slide 2" class="w-full h-[60vh] object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.pexels.com/photos/14708781/pexels-photo-14708781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Coffee Slide 3" class="w-full h-[60vh] object-cover">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 bg-white">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-semibold text-gray-800">Our Coffee Menu</h2>
+            <p class="text-lg text-gray-500">Delicious and freshly brewed coffee just for you!</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
+            <!-- Espresso Item -->
+            <div class="card bg-white p-4 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                <img src="https://img.freepik.com/premium-photo/deep-rich-color-freshly-brewed-espresso-ai-generated_866663-8536.jpg?w=900" alt="Coffee 1" class="w-full h-48 object-cover rounded-md">
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Espresso</h3>
+                <p class="text-gray-500 mt-2">A classic espresso shot with rich, bold flavor.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-lg font-bold text-gray-700">Rs250</span>
+                    <button onclick="addToCart('Espresso', 250)" class="bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Cappuccino Item -->
+            <div class="card bg-white p-4 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                <img src="https://helenacoffee.vn/wp-content/uploads/2022/06/5-3-1024x683.jpg" alt="Coffee 2" class="w-full h-48 object-cover rounded-md">
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Cappuccino</h3>
+                <p class="text-gray-500 mt-2">A smooth, creamy cappuccino with a light froth.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-lg font-bold text-gray-700">Rs400</span>
+                    <button onclick="addToCart('Cappuccino', 400)" class="bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Latte Item -->
+            <div class="card bg-white p-4 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                <img src="https://makehealthyrecipes.com/wp-content/uploads/2023/02/Is-a-latte-hot-or-cold-683x1024.jpg" alt="Coffee 3" class="w-full h-48 object-cover rounded-md">
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Latte</h3>
+                <p class="text-gray-500 mt-2">A creamy latte with a velvety smooth texture.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-lg font-bold text-gray-700">Rs300</span>
+                    <button onclick="addToCart('Latte', 300)" class="bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-1/2 max-w-lg">
+            <h2 class="text-2xl font-semibold mb-4">Your Cart</h2>
+            <div id="cart-items" class="space-y-4 mb-4">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-lg font-bold">Total: Rs <span id="total-price">0</span></span>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-full" onclick="toggleCartModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white py-6">
+        <div class="text-center">
+            <p>&copy; Coffee Shop</p>
+            <p>Contact us: support@coffeeshop.com</p>
+            <div class="space-x-6">
+                <a href="https://www.instagram.com" target="_blank" class="hover:text-gray-300">Instagram</a>
+                <a href="https://www.facebook.com" target="_blank" class="hover:text-gray-300">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    
+        // Cart related variables
+        let cartCount = 0;
+        const cart = [];
+    
+        // Add item to cart
+        function addToCart(item, price) {
+            cartCount++;  // Increment cart count
+            document.getElementById('cart-count').innerText = cartCount; // Update cart count in nav bar
+    
+            // Add item to cart array
+            const existingItem = cart.find(cartItem => cartItem.item === item);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ item, price, quantity: 1 });
+            }
+    
+            // Log the current cart to the console
+            console.log('Cart:', cart);
+            updateCartModal();
+        }
+
+        // Update the cart modal
+        function updateCartModal() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear the cart modal
+
+            let total = 0;
+
+            cart.forEach(cartItem => {
+                total += cartItem.price * cartItem.quantity;
+
+                const cartItemDiv = document.createElement('div');
+                cartItemDiv.classList.add('flex', 'justify-between', 'items-center');
+
+                const itemText = document.createElement('span');
+                itemText.classList.add('font-semibold');
+                itemText.innerText = `${cartItem.item} (Rs${cartItem.price}) x ${cartItem.quantity}`;
+
+                const quantityControls = document.createElement('div');
+                quantityControls.classList.add('flex', 'space-x-2');
+
+                const decrementButton = document.createElement('button');
+                decrementButton.innerText = '-';
+                decrementButton.classList.add('bg-gray-200', 'px-2', 'py-1', 'rounded');
+                decrementButton.onclick = () => updateQuantity(cartItem.item, -1);
+
+                const incrementButton = document.createElement('button');
+                incrementButton.innerText = '+';
+                incrementButton.classList.add('bg-gray-200', 'px-2', 'py-1', 'rounded');
+                incrementButton.onclick = () => updateQuantity(cartItem.item, 1);
+
+                quantityControls.appendChild(decrementButton);
+                quantityControls.appendChild(incrementButton);
+
+                cartItemDiv.appendChild(itemText);
+                cartItemDiv.appendChild(quantityControls);
+                cartItemsContainer.appendChild(cartItemDiv);
+            });
+
+            document.getElementById('total-price').innerText = total;
+        }
+
+        // Update quantity of a cart item
+        function updateQuantity(item, change) {
+            const cartItem = cart.find(cartItem => cartItem.item === item);
+            if (cartItem) {
+                cartItem.quantity += change;
+                if (cartItem.quantity <= 0) {
+                    const index = cart.indexOf(cartItem);
+                    cart.splice(index, 1);
+                }
+                updateCartModal();
+            }
+        }
+
+        // Toggle cart modal visibility
+        function toggleCartModal() {
+            const cartModal = document.getElementById('cart-modal');
+            cartModal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

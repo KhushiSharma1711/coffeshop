@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+    <style> 
+        p.solid {border-style: solid;}
+        
+        p {color:crimson;} 
+        p {color:crimson;} 
+        p {text-align:center;}
+        h2 {text-align:center;}
+        form {text-align:center;}
+
+        .flex-container {
+         display: flex;
+         background-color: rgb(5, 112, 131);
+         justify-content: center;
+        }
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 8px;
+  padding: 10px;
+  font-size: 20px;
+  text-align:center;
+}
+  h3 {text-align:center;}
+
+  .form container button{
+    width: 46%;
+    padding:8px;
+    margin: 8px 1%;
+    border-radius: 4px;
+    background-color: darksalmon;
+    color: brown;
+    cursor: pointer;
+  }
+
+  *{
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #2196F3;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+  text-align:left;}
+
+  .main {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+  text-align:center;
+}
+
+.right {
+  background-color: #04AA6D;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+  text-align:right;
+}
+
+
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%;
+  }
+}
+
+</style>
+            
+</head>
+
+<body>
+    <p class="solid">
+    <h2>Webpage</h2>
+    <p>This is my first webpage</p>
+    <p>Here are some few links which supports this page</p>
+    
+        <a href="https://ttconsultants.com" >office page</a><br>
+        <a href="http://127.0.0.1:5500/form2.html"> personal details form</a><br><br><br>
+  
+        <img src="notebook.jpg" alt="notebook" >  
+    
+        <form>
+            <fieldset>
+                <legend><h4>Feedback_form</h4></legend>
+                Your feedback type:<br>
+            <input type="radio" id="comment" name="feedback" value="comment" required>
+            <label for="comment">Comment</label><br>
+            <input type="radio" id="issue" name="feedback" value="issue" required>
+            <label for="issue">Issue</label><br>
+            <input type="radio" id="question" name="feedback" value="question" required>
+            <label for="question">Question</label><br><br>
+
+           
+            Name: <input type="text" id="username" name="username" placeholder="your_name" required><br><br>
+                
+            Your feedback: <br><textarea name="mytext" cols="40" rows="5" placeholder="write your feedback..."></textarea><br><br>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+     
+
+
+
+
+
+        
+        </p>
+        <h3>Creating a flex container</h3>
+        <div class="flex-container">
+            <div>X</div>
+            <div>Y</div>
+            <div>Z</div>  
+          </div>
+          <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+         <p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+    <h4>Responsive image on webpage</h4>
+    <img src="" style="max-width:100%;height:auto;" >
+<h3 style="font-size:4vw;">Responsive html tag</h3>
+<p>Trying the resizing feature</p>
+<div class="left">
+    <p>left menu</p>
+</div>
+<div class="main">
+    <p>main menu</p>
+</div>
+<div class="right">
+    <p>right menu</p>
+</div>
+    
+
+   
+       
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/8acbf8e0fe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+          <nav>
+            <img src="https://st2.depositphotos.com/3867453/6842/v/950/depositphotos_68427515-stock-illustration-letter-k-logo-icon-design.jpg" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+          </nav>
+          <div class="header-text">
+            <p>Web developer</p>
+            <h1>Hi, I'm <span>Khushi Sharma</span><br> from Chandigarh</h1>
+          </div>
+        </div>
+    </div>
+    
+    <!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://easydrawingguides.com/wp-content/uploads/2018/04/how-to-draw-an-anime-girl-face-featured-image-1200.png" alt="about_img">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor nemo ut ad adipisci, velit dignissimos corporis? Ea reprehenderit aliquam aliquid? Laboriosam facere explicabo quae soluta molestias accusantium nesciunt nihil minima!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            
+                            <li><span>HTML,CSS</span><br> Frontend developer</li>
+                            <li><span>to be</span><br> # developer</li>
+                            <li><span>to be</span><br> # developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            
+                            <li><span>work</span><br>Frontend developer</li>
+                            <li><span>to be</span><br> # developer</li>
+                            <li><span>to be</span><br> # developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            
+                            <li><span>2025</span><br> BCA from SD Chandigarh</li>
+                            <li><span>2022</span><br> 12th from GMSSS 33D</li>
+                            <li><span>2020</span><br> 10th from GMSSS 33D</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!--services-->
+  <div id="Services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi perspiciatis quam fugiat eveniet officiis debitis.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-regular fa-face-smile"></i>
+                <h2>services title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi perspiciatis quam fugiat eveniet officiis debitis.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-regular fa-face-smile"></i>
+                <h2>services title2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi perspiciatis quam fugiat eveniet officiis debitis.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+  </div>
+<hr>
+  <!--portfolio-->
+  <div id="portfolio">
+    <div class="container">
+    <h1 class="sub-title">My work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2540251317/display_1500/stock-photo-alien-planet-jungle-landscape-waterfront-night-sky-small-moons-aspect-ratio-high-2540251317.jpg" alt="img1">
+            <div class="layer">
+                <h3>Social media app</h3>
+                <p>The app connects you to the talented people around the worls.
+                    Download it from play store.
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </p>
+            </div>
+          
+        </div>
+            <div class="work">
+                <img src="https://www.shutterstock.com/shutterstock/photos/2570859335/display_1500/stock-photo-high-tech-unicorn-made-from-digital-line-material-design-futuristic-startups-innovative-2570859335.jpg" alt="img2">
+                <div class="layer">
+                    <h3>Music app</h3>
+                    <p>The app connects you to the talented people around the worls.
+                        Download it from play store.
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </p>
+                </div>
+            
+            </div>
+                <div class="work">
+                    <img src="https://www.crunchgrowth.com/wp-content/uploads/2017/04/mobile_apps.jpg" alt="img3">
+                    <div class="layer">
+                        <h3> Online Shopping app</h3>
+                        <p>The app connects you to the talented people around the worls.
+                            Download it from play store.
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </p>
+                    </div>
+            
+        </div>
+    </div>
+           <a href="about.html" target="_blank" class="btn">See more</a>
+
+  </div>
+</div>
+<!--contact-->
+<hr>
+<div id="contact">
+
+<div class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p> <i class="fas fa-paper-plane"></i>  @example.com</p>
+            <p><i class="fas fa-phone-square-alt"></i> 01122334455</p><br>
+            <div class="Social-icons">
+                <a href="https://www.instragram.com"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your name" required>
+                <input type="Email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" name="Message" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+    </div>
+   
+</div>
+<div class="copyright">
+    <p> copyright khushi.</p>
+        
+</div>
+</div>
+
+    <script>
+         
+        
+                
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+             
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>        
+        var  sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        // Get the form element
+        const form = document.getElementById('myForm');
+      
+        // Add an event listener for the form's submit event
+        form.addEventListener('submit', function(event) {
+          // Prevent the form from submitting to avoid page refresh
+          event.preventDefault();
+      
+          // Get the form data
+          const formData = new FormData(form);
+      
+          // Convert form data to an object
+          const formObject = {};
+          formData.forEach((value, key) => {
+            formObject[key] = value;
+          });
+      
+          // Log the form data to the console
+          console.log(formObject);
+        });
+      </script>
+      
+    
+</body>
+</html>
