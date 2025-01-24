@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage with Tailwind CSS</title>
+    <!-- Tailwind CSS CDN -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-300 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-blue-300 text-white p-4">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">My  Webpage</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#" class="hover:text-blue-600">About</a></li>
+                <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="max-w-7xl mx-auto p-8">
+        <section class="text-center mb-8">
+            <h2 class="text-3xl font-semibold mb-4">Welcome to my Webpage</h2>
+            <p class="text-lg">This is a simple webpage built with Tailwind CSS. It is responsive and looks good on any screen size.</p>
+        </section>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2 hover:text-purple-400">box 1</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos minus dicta facilis unde doloribus sapiente fuga in nemo ex.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2 hover:text-purple-400">box 2</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat possimus quis odit ex ea!</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2 hover:text-purple-400">box 3</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae accusamus odio quod labore fugiat dicta vero?.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-400 text-white text-center p-4">
+        <p>&copy; Footer of Webpage</p>
+    </footer>
+
+</body>
+</html>

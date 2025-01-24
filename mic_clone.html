@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+    <!-- Navbar Section -->
+    <div class="navbar flex justify-between items-center p-4 bg-blue-600">
+        <!-- Hamburger Menu (visible only on mobile) -->
+        <div class="flex justify-center items-center md:order-1">
+            <div class="hamburger inline-block p-4 cursor-pointer md:hidden">
+                <div class="line h-1 w-8 my-1 bg-black"></div>
+                <div class="line h-1 w-8 my-1 bg-black"></div>
+                <div class="line h-1 w-8 my-1 bg-black"></div>
+            </div>
+            <div class="search hidden md:block text-white">Search Icon</div>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo text-center font-bold text-xl flex md:order-2 relative">
+            <div>Microsoft</div>
+            <!-- Features Dropdown (visible only on larger screens) -->
+             <!--#make bg same of img bg-->
+            <div class="features absolute hidden md:flex bg-gray-200 rounded shadow-lg w-fit space-x-4 mt-1 p-2">
+                <div class="fitem">Microsoft</div>
+                <div class="fitem">365</div>
+                <div class="fitem">Office</div>
+                <div class="fitem">Windows</div>
+                <div class="fitem">Surfaces</div>
+                <div class="fitem">Box</div>
+                <div class="fitem">Support</div>
+            </div>
+        </div>
+
+        <!-- Account Section -->
+        <div class="cart text-center md:order-3 text-white">
+            <div class="search hidden md:block">MS Office Icons</div>
+            <div>Cart</div>
+            <div>Account</div>
+        </div>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="slider flex flex-col-reverse md:flex-row bg-gray-200 mt-8 p-4">
+        <!-- Left Side Text -->
+        <div class="left flex-1 flex-col justify-center ">
+            <h1 class="text-4xl mx-5">Surface Laptop 4</h1>
+            <p class="w-3/4 mx-5">Do it all with perfect balance of sleek, ultra-thin design, multitasking speed and improved performance</p>
+        </div>
+        <!-- Right Side Image -->
+        <div class="right flex-1">
+            <img src="https://via.placeholder.com/500" alt="Surface Laptop Image" class="w-full h-auto rounded-lg">
+        </div>
+    </div>
+
+</body>
+</html>
